@@ -81,7 +81,7 @@ CURRENCIES_BY_COUNTRY_CODE = {
     'PN': ('NZD',),
     'PL': ('PLN',),
     'PM': ('EUR',),
-    'ZM': ('ZMK',),
+    'ZM': ('ZMW',),
     'EH': ('MAD',),
     'EE': ('EUR',),
     'EG': ('EGP',),
