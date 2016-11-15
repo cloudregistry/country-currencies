@@ -28,12 +28,12 @@ import pycountry
 
 def find_country(upper_name):
     try:
-        return pycountry.countries.get(official_name=upper_name).alpha2
+        return pycountry.countries.get(official_name=upper_name).alpha_2
     except KeyError:
         try:
-            return pycountry.countries.get(name=upper_name).alpha2
+            return pycountry.countries.get(name=upper_name).alpha_2
         except KeyError:
-            return pycountry.countries.get(common_name=upper_name).alpha2
+            return pycountry.countries.get(common_name=upper_name).alpha_2
 
 
 # but we need to uppercase the country names in its indices
@@ -89,6 +89,7 @@ OVERRIDES = {
     'TM': ('TMT',),  # http://en.wikipedia.org/wiki/Turkmenistan
     'TJ': ('TJS',),  # http://en.wikipedia.org/wiki/Tajikistan
     'AX': ('EUR',),  # http://en.wikipedia.org/wiki/%C3%85land_Islands
+    'ZM': ('ZMW',),  # https://en.wikipedia.org/wiki/Zambian_kwacha
 }
 
 for cc, v in OVERRIDES.iteritems():
